@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>掘がじゃんぷするだけ。</title>
+	<style type="text/css">
+		#gamecanvas {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1;
+		}
+		#volume {
+			margin-top: 500px;
+		}
+		.eturnpage {
+			font-size: 20px;
+		}
+		span {
+			color: rgb(204, 0, 255);
+		}
+		.main {
+			height: 900px;
+			background-color: rgba(0, 0, 0, 0.356);
+		}
+		.main-continer {
+			height: 250px;
+			background-color: rgba(87, 253, 253, 0.493);
+			margin-left: 15px;
+			padding-left: 15px;
+			padding-top: 1px;
+			margin-right: 40%;
+		}
+	</style>
+	<script type="text/javascript" src="index.js"></script>	
+</head>
+<body>
+	<div class="main">
+	  <canvas id="gamecanvas" width="480" height="480"></canvas>
+      <audio src="./bgm.mp3" id="BGM" type="audio/mpeg" class="audio"></audio>
+      <audio src="./bane.mp3" id="btn_audio" class="audio"></audio>
+	  <audio src="./diea.mp3" id="gameover" class="audio"></audio>
+	  <audio src="./die2.wav" id="gameover2" class="audio"></audio>
+  
+      <input type="range" id="volume" value="1.0" min="0.0" max="1.0" step="0.1">
+	  <input type="range" id="volume-jump" value="1.0" min="0.0" max="1.0" step="0.1">
+	  <p class="returnpage" onclick="reload()">最初から遊びますか？<span>ここ</span>をクリック</p>
+	  <div class="main-continer">
+		<h1>遊び方</h1>
+		<p>障害物をジャンプでよけましょう(いずれかのキーを押してジャンプ)<br>
+		また、敵を一回よけるごとに10ptのスコアが加算されます<br>
+	    ハイスコアを目指して頑張ってください</p>
+	  </div>
+    </div>
+    
+</body>
+</html>
