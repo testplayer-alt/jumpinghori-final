@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>掘がじゃんぷするだけ。</title>
+	<style type="text/css">
+		#gamecanvas {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1;
+		}
+	</style>
+	<script type="text/javascript" src="index.js"></script>	
+</head>
+<body>
+	<canvas id="gamecanvas-back" width="480" height="480"></canvas>
+	<canvas id="gamecanvas" width="480" height="480"></canvas>
+ 
+    <audio id="btn_audio">
+        <source src="./bane.mp3" type="audio/mp3">
+    </audio>
+	<audio id="gameover">
+		<source src="./diea.mp3">
+	</audio>
+	<audio id="gameover2">
+		<source src="./die2.wav">
+	</audio>
+</body>
+</html>
