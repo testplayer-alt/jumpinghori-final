@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>掘がじゃんぷするだけ。</title>
+	<style type="text/css">
+		#gamecanvas {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1;
+		}
+		#gamecanvas-back {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1;
+		}
+		.main {
+			height: 800px;
+			background-color: rgba(0, 0, 0, 0.356);
+			position: relative;
+		}
+		.main-continer {
+			height: 250px;
+			background-color: rgba(87, 253, 253, 0.493);
+			margin-left: 15px;
+			padding-left: 15px;
+			padding-top: 1px;
+			padding-right: 20px;
+			position: absolute;
+			top: 530px;
+		}
+		#nbtn{
+			margin-top: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="index.js"></script>	
+</head>
+<body>
+	<div class="main">
+	  <canvas id="gamecanvas" width="480" height="480"></canvas>
+	  <canvas id="gamecanvas-back" width="480" height="480"></canvas>
+      <audio src="./bgm.mp3" id="BGM" type="audio/mpeg" class="audio"></audio>
+      <audio src="./bane.mp3" id="btn_audio" class="audio"></audio>
+	  <audio src="./diea.mp3" id="gameover" class="audio"></audio>
+	  <audio src="./die2.wav" id="gameover2" class="audio"></audio>
+	  <input type="button" value="AIモード" onclick="AImodeon();">
+	  <input type="button" value="ノーマルモード" onclick="nomalmode();" id="nbtn">
+	  <input type="button" value="ハードモード" onclick="heardmode();" id="hbtn">
+	  <div class="main-continer">
+		<h1>遊び方</h1>
+		<p>障害物をジャンプでよけてね(キーを押してジャンプ)<br>
+		敵を一回よけるごとに10ptのスコアが加算されるよ<br>
+	    ハイスコアを目指して頑張ってね💪💪</p>
+	  </div>
+    </div>
+    
+</body>
+</html>
